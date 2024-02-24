@@ -1,11 +1,11 @@
-// Import styled components
-import { StyledGrandPrixs } from "@/styles/styles-schedule";
-
 // Components
 import GrandPrix from "./components/organisms/GrandPrix";
 
 // Types
 import { GrandPrixProps } from "@/types/organisms/GrandPrix";
+
+// Styles
+import styles from "./Schedule.module.css";
 
 
 
@@ -29,20 +29,11 @@ export default async function Page() {
 
   return (
     <main>
-      <StyledGrandPrixs>
+      <div className={styles.scheduleGrid}>
         {races.map((race: GrandPrixProps, index: number) => (
           <GrandPrix {...race} key={index} />
         ))}
-      </StyledGrandPrixs>
+      </div>
     </main>
   );
 }
-
-
-
-// STYLED COMPONENTS TRIGGERS AN ERROR WITH THIS WAY OF FETCHING!!!
-
-// Styles
-/* export const Title = styled.h1`
-  color: red;
-`; */

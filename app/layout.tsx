@@ -1,15 +1,17 @@
+// Global styles
+import './global.css'
+
 // Metadata
 import type { Metadata } from "next";
 
 // Font
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Kanit } from "next/font/google";
 
-// Styled-Components config
-import StyledComponentsRegistry from './lib/registry';
-import GlobalStyles from "@/styles/GlobalStyles";
-import theme from "@/styles/theme";
-import { ThemeProvider } from "styled-components";
+const kanit = Kanit({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-kanit",
+});
 
 
 
@@ -24,11 +26,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          {children}
-        </StyledComponentsRegistry>
+      <body className={`${kanit.className}`}>
+        <h1>Test heading</h1>
+        {children}
       </body>
     </html>
   );

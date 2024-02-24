@@ -1,0 +1,160 @@
+/* --- CSS RESET --- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--neutral-100);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* --- HEADINGS --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--neutral-1400);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  h4 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  h5 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+/* --- PARAGRAPHS --- */
+p {
+  color: var(--neutral-1100);
+  font-weight: 300;
+  letter-spacing: -2%;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* --- VARIABLES --- */
+:root {
+  /* Primary shades */
+  --prim-100: #fce6e6;
+  --prim-200: #f9cdcc;
+  --prim-300: #f6b4b3;
+  --prim-400: #f08380;
+  --prim-500: #ea514d;
+  --prim-600: #e73833;
+  --prim-700: #e10600;
+  --prim-800: #cb0500;
+  --prim-900: #b40500;
+  --prim-1000: #9e0400;
+
+  /* Neutral shades */
+  --neutral-100: #ffffff;
+  --neutral-200: #f8fbff;
+  --neutral-300: #f4f5f6;
+  --neutral-400: #e9ebed;
+  --neutral-500: #dde0e3;
+  --neutral-600: #c7ccd1;
+  --neutral-700: #b0b8bf;
+  --neutral-800: #9aa4ac;
+  --neutral-900: #84909a;
+  --neutral-1000: #6e7c87;
+  --neutral-1100: #5c6770;
+  --neutral-1200: #49525a;
+  --neutral-1300: #40484f;
+  --neutral-1400: #2e3338;
+  --neutral-1500: #25292d;
+  --neutral-1600: #222222;
+
+  /* Error shades */
+  --error-100: #fce6e6;
+  --error-300: #f08380;
+  --error-500: #e10600;
+
+  /* Success shades */
+  --error-100: #dbf0d9;
+  --error-300: #a5daa1;
+  --error-500: #4bb543;
+
+  /* Warning shades */
+  --error-100: #fff1e7;
+  --error-300: #fdba87;
+  --error-500: #fb750e;
+
+  /* Info shades */
+  --error-100: #e7f1fb;
+  --error-300: #88bbed;
+  --error-500: #1077da;
+}
