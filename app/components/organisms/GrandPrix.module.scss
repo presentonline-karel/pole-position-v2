@@ -1,63 +1,100 @@
-/* .grandPrix {
-  border-radius: 6px;
-  padding: 20px 16px;
-  border: 0.4px solid var(--neutral-400);
+.grandPrix {
   background-color: var(--neutral-200);
+  border: var(--card-edge-border);
+  border-radius: var(--rounded-md);
+  box-shadow: var(--card-shadow);
+  padding: 20px 16px;
 
-  .grandPrix__circuitMap {
-    padding: 12px 16px;
-    border-radius: 6px;
-    background-color: var(--prim-100);
-    border: 0.4px solid var(--prim-200);
-    width: 135px;
-    height: 104px;
+  .heading {
+    width: calc(100% - 135px);
 
-    /* Desktop
-    @media (min-width: 1280px) {
-      background-image: url("/Plus-Bg.png");
-      background-size: 7px;
+    .round {
+      color: var(--neutral-1100);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
     }
 
-    .grandPrix__circuitMapContainer {
-      position: relative;
-      width: 100%;
-      height: 100%;
+    .thisWeek {
+      background-color: var(--prim-100);
+      border-radius: var(--rounded-md);
+      color: var(--prim-800);
+      font-size: 10px;
+      line-height: 10px;
+      padding: 4px 8px;
+    }
 
-      .circuitMapImage {
-        object-fit: cover;
+    .name {
+      color: var(--neutral-1400);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+
+    .nameIcon {
+      color: var(--prim-800);
+      height: 23px;
+      width: 9px;
+    }
+
+    .fullName {
+      color: var(--neutral-1100);
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    .date {
+      color: var(--neutral-1300);
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  .mapWrapper {
+    background-color: var(--prim-100);
+    border-radius: var(--rounded-md);
+    border: 0.4px solid var(--prim-200);
+    height: 104px;
+    padding: 12px 16px;
+    width: 135px;
+  }
+
+  .preview {
+    border-radius: var(--rounded-md);
+    height: 152px;
+    overflow: hidden;
+  }
+
+  .schedule {
+    .scheduleDay {
+      border-bottom: 1px solid var(--neutral-400);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      padding-bottom: 8px;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
       }
     }
-  }
 
-  .gpPreviewImageContainer {
-    position: relative;
-    width: 100%;
-    height: 152px;
-    border-radius: 6px;
-
-    .gpPreviewImageContainer {
-      object-fit: cover;
-      object-position: 50% bottom;
+    .event {
+      color: var(--neutral-1400);
+      width: 152px;
     }
-  }
-} */
 
-.testTextRed {
-  color: red;
-}
+    .dayTime {
+      width: 151px;
+    }
 
-.grandPrix {
-  border-radius: 6px;
-  padding: 20px 16px;
-  border: 0.4px solid var(--neutral-400);
-  background-color: var(--neutral-200);
+    .day {
+      color: var(--neutral-1100);
+    }
 
-  &__circuitMap {
-    padding: 12px 16px;
-    border-radius: 6px;
-    background-color: var(--prim-100);
-    border: 0.4px solid var(--prim-200);
-    width: 135px;
-    height: 104px;
+    .time {
+      color: var(--neutral-1400);
+    }
   }
 }
