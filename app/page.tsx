@@ -25,7 +25,7 @@ async function getRaceSchedule() {
 export default async function Page() {
   const schedule = await getRaceSchedule();
   const races = schedule.MRData.RaceTable.Races;
-  console.log(schedule.MRData.RaceTable.Races);
+  // console.log(schedule.MRData.RaceTable.Races);
 
   return (
     <main>
