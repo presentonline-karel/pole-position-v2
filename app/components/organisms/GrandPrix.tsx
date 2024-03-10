@@ -64,6 +64,7 @@ export default function GrandPrix(data: GrandPrixProps) {
         </div>
       </div>
 
+      {/* Show GP details (if upcoming) */}
       {isGrandPrixThisWeek(new Date(data.date)) && (
         <div>
 
@@ -131,6 +132,18 @@ export default function GrandPrix(data: GrandPrixProps) {
           </div>
         </div>
       )}
+
+      {/* Show big map (from tablet) */}
+      <div className={`${styles.bigMapWrapper}`}>
+        <div className="w-full h-full relative">
+          <Image
+            className="object-contain"
+            src="/Bahrain-Circuit-Map.png"
+            alt="Bahrain circuit map"
+            fill={true}
+          />
+        </div>
+      </div>
     </div>
   )
 }

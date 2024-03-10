@@ -1,5 +1,5 @@
 // Global styles
-import './global.css'
+import './global.scss'
 
 // Metadata
 import type { Metadata } from "next";
@@ -27,7 +27,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className={`${kanit.className}`}>
-        <h1>Test heading</h1>
         {children}
       </body>
     </html>

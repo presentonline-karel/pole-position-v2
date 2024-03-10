@@ -1,3 +1,6 @@
+// Breakpoints
+@import "../../breakpoints.scss";
+
 .grandPrix {
   background-color: var(--neutral-200);
   border: var(--card-edge-border);
@@ -7,6 +10,10 @@
 
   .heading {
     width: calc(100% - 135px);
+
+    @media (min-width: $tablet-portrait) {
+      width: 100%;
+    }
 
     .round {
       color: var(--neutral-1100);
@@ -42,6 +49,7 @@
       color: var(--neutral-1100);
       font-size: 12px;
       line-height: 12px;
+      max-width: 203px;
     }
 
     .date {
@@ -58,6 +66,10 @@
     height: 104px;
     padding: 12px 16px;
     width: 135px;
+
+    @media (min-width: $tablet-portrait) {
+      display: none;
+    }
   }
 
   .preview {
@@ -95,6 +107,21 @@
 
     .time {
       color: var(--neutral-1400);
+    }
+  }
+
+  .bigMapWrapper {
+    background-color: var(--prim-100);
+    background-image: url("/Plus-Bg.png");
+    border-radius: var(--rounded-md);
+    border: 0.4px solid var(--prim-200);
+    display: none;
+    height: 132px;
+    padding: 12px;
+    width: 100%;
+
+    @media (min-width: $tablet-portrait) {
+      display: block;
     }
   }
 }
