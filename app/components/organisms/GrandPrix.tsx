@@ -3,6 +3,8 @@ import { GrandPrixProps } from "@/types/organisms/GrandPrix";
 
 // Styles
 import styles from "./GrandPrix.module.scss";
+
+// Next & React
 import Image from "next/image";
 
 // FontAwesome

@@ -1,0 +1,61 @@
+// Breakpoints
+@import "../../breakpoints.scss";
+
+.footer {
+  background-color: var(--neutral-1400);
+  padding: 40px 0 32px;
+
+  .container {
+    padding: 0 16px;
+
+    .wrapper {
+      border-bottom: 1px solid var(--neutral-1100);
+      padding-bottom: 32px;
+
+      .logo {
+        height: 30.44px;
+        margin-bottom: 32px;
+        position: relative;
+        width: 197px;
+      }
+
+      .linkGroup {
+        width: 100%;
+
+        .linkTitle {
+          color: var(--neutral-200);
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+
+        .link {
+          color: var(--neutral-100);
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .footerBottom {
+      padding-top: 16px;
+
+      .copyright {
+        color: var(--neutral-200);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      .socials {
+        gap: 24px;
+
+        .social {
+          color: var(--neutral-100);
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+  }
+}

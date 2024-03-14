@@ -1,6 +1,9 @@
 // Global styles
 import './global.scss'
 
+// Components
+import Footer from './components/layout/Footer';
+
 // Metadata
 import type { Metadata } from "next";
 
@@ -28,6 +31,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en">
       <body className={`${kanit.className}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
