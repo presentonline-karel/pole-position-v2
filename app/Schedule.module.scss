@@ -5,13 +5,13 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 32px 16px 56px;
+  padding: 32px 0 56px;
 
   @media (min-width: $tablet-portrait) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
-    padding: 48px;
+    padding: 48px 0;
   }
 
   @media (min-width: $tablet-landscape) {
@@ -21,7 +21,7 @@
 
   @media (min-width: $desktop-xs) {
     gap: 32px;
-    padding: 64px 80px;
+    padding: 64px 0;
   }
 
   @media (min-width: $desktop-sm) {
@@ -29,8 +29,35 @@
   }
 
   @media (min-width: $desktop-md) {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 80px;
+    padding: 80px 0;
+  }
+}
+
+.tabs {
+  border-bottom: 2px solid var(--neutral-500);
+  padding: 0 16px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    .tab {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 12px;
+      border-radius: 6px 6px 0 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      &.active {
+        background-color: var(--prim-100);
+        color: var(--prim-800);
+        border-bottom: 2px solid var(--prim-800);
+        margin-bottom: -2px;
+      }
+    }
   }
 }

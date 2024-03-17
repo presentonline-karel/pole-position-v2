@@ -2,21 +2,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Components
+import Wrapper from "../helpers/Wrapper";
+
 // Styles
 import styles from "./Footer.module.scss";
+
+// FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <Wrapper>
         <div className={styles.wrapper}>
 
           {/* Logo */}
-          <div className={styles.logo}>
+          <div className={`${styles.logo} relative`}>
             <Image
               className="object-contain"
               src="/Pole-Position-Logo.png"
@@ -25,12 +31,17 @@ export default function Footer() {
             />
           </div>
 
-          {/* Footer links */}
-          <div className="flex justify-between gap-md">
-            <div className={styles.linkGroup}>
-              <div className={`${styles.linkTitle} mb-md`}>Main pages</div>
+          {/* Arrow up */}
+          <Link className={`${styles.arrowContainer} absolute`} href="#container">
+            <FontAwesomeIcon className={styles.arrowUp} icon={faArrowUp} />
+          </Link>
 
-              <div className="flex flex-col gap-xs">
+          {/* Footer links */}
+          <div className={styles.linkGroups}>
+            <div className={styles.linkGroup}>
+              <div className={styles.linkTitle}>Main pages</div>
+
+              <div className={styles.links}>
                 <Link className={styles.link} href="/">Schedule</Link>
                 <Link className={styles.link} href="/">Results</Link>
                 <Link className={styles.link} href="/">Drivers</Link>
@@ -38,10 +49,20 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className={styles.linkGroup}>
-              <div className={`${styles.linkTitle} mb-md`}>Others</div>
+            <div className={`${styles.linkGroup} ${styles.linkGroupSocials}`}>
+              <div className={styles.linkTitle}>Socials</div>
 
-              <div className="flex flex-col gap-xs">
+              <div className={styles.links}>
+                <Link className={styles.link} href="/">Facebook</Link>
+                <Link className={styles.link} href="/">Instagram</Link>
+                <Link className={styles.link} href="/">Twitter</Link>
+              </div>
+            </div>
+
+            <div className={styles.linkGroup}>
+              <div className={styles.linkTitle}>Others</div>
+
+              <div className={styles.links}>
                 <Link className={styles.link} href="/">Privacy policy</Link>
                 <Link className={styles.link} href="/">Partners</Link>
               </div>
@@ -49,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`${styles.footerBottom} flex items-center justify-between`}>
+        <div className={`${styles.footerBottom}`}>
           <div className={styles.copyright}>
             © POLE POSITION 2024
           </div>
@@ -60,7 +81,7 @@ export default function Footer() {
             <FontAwesomeIcon className={styles.social} icon={faFacebookF} />
           </div>
         </div>
-      </div>
+      </Wrapper>
     </footer>
   )
 }

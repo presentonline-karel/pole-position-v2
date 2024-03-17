@@ -30,8 +30,10 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className={`${kanit.className}`}>
-        {children}
-        <Footer />
+        <div id="container">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,3 +1,6 @@
+// Breakpoints
+@import "./breakpoints.scss";
+
 /* --- CSS RESET --- */
 *,
 *:before,
@@ -8,11 +11,16 @@
   letter-spacing: -0.02em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--neutral-100);
   margin: 0;
   padding: 0;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 /* --- UTILITY CLASSES --- */
@@ -147,7 +155,6 @@ body {
 .whitespace-nowrap {
   white-space: nowrap;
 }
-
 
 /* --- HEADINGS --- */
 h1,

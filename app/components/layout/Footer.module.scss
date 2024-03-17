@@ -5,56 +5,189 @@
   background-color: var(--neutral-1400);
   padding: 40px 0 32px;
 
-  .container {
-    padding: 0 16px;
+  @media (min-width: $tablet-portrait) {
+    padding: 40px 0 24px;
+  }
 
-    .wrapper {
-      border-bottom: 1px solid var(--neutral-1100);
-      padding-bottom: 32px;
+  @media (min-width: $desktop-xs) {
+    padding: 64px 0 24px;
+  }
 
-      .logo {
-        height: 30.44px;
-        margin-bottom: 32px;
-        position: relative;
-        width: 197px;
+  @media (min-width: $desktop-sm) {
+    padding: 72px 0 24px;
+  }
+
+  .wrapper {
+    border-bottom: 1px solid var(--neutral-1100);
+    padding-bottom: 32px;
+    position: relative;
+
+    @media (min-width: $tablet-landscape) {
+      display: flex;
+      gap: 120px;
+    }
+
+    @media (min-width: $desktop-xs) {
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-sm) {
+      gap: 144px;
+    }
+
+    @media (min-width: $desktop-md) {
+      gap: 179px;
+    }
+
+    .logo {
+      height: 30.44px;
+      margin-bottom: 32px;
+      width: 197px;
+
+      @media (min-width: $desktop-xs) {
+        height: 40px;
+        margin-bottom: 0;
+        width: 259px;
+      }
+    }
+
+    .arrowContainer {
+      height: 20px;
+      right: 0px;
+      top: 6px;
+      width: 20px;
+
+      @media (min-width: $tablet-landscape) {
+        height: 24px;
+        width: 24px;
+      }
+
+      @media (min-width: $desktop-xs) {
+        height: 28px;
+        width: 28px;
+      }
+
+      .arrowUp {
+        color: var(--neutral-100);
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .linkGroups {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+
+      @media (min-width: $tablet-landscape) {
+        gap: 80px;
+      }
+
+      @media (min-width: $desktop-sm) {
+        gap: 120px;
+      }
+
+      @media (min-width: $desktop-md) {
+        gap: 32px;
       }
 
       .linkGroup {
         width: 100%;
+
+        @media (min-width: $desktop-md) {
+          width: 187px;
+        }
 
         .linkTitle {
           color: var(--neutral-200);
           font-size: 16px;
           font-weight: 300;
           line-height: 24px;
+          margin-bottom: 8px;
+          white-space: nowrap;
+
+          @media (min-width: $desktop-xs) {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 20px;
+          }
+
+          @media (min-width: $desktop-md) {
+            margin-bottom: 24px;
+          }
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+
+          @media (min-width: $desktop-xs) {
+            gap: 8px;
+          }
         }
 
         .link {
           color: var(--neutral-100);
           font-size: 20px;
           line-height: 26px;
+          white-space: nowrap;
+
+          @media (min-width: $desktop-xs) {
+            font-weight: 300;
+            gap: 120px;
+          }
+        }
+      }
+
+      .linkGroupSocials {
+        display: none;
+
+        @media (min-width: $tablet-landscape) {
+          display: block;
         }
       }
     }
+  }
 
-    .footerBottom {
-      padding-top: 16px;
+  .footerBottom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
 
-      .copyright {
-        color: var(--neutral-200);
-        font-weight: 300;
-        font-size: 16px;
+    @media (min-width: $tablet-landscape) {
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-xs) {
+      padding-top: 24px;
+    }
+
+    .copyright {
+      color: var(--neutral-200);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 26px;
+
+      @media (min-width: $desktop-xs) {
+        font-size: 18px;
         line-height: 26px;
       }
+    }
 
-      .socials {
-        gap: 24px;
+    .socials {
+      gap: 24px;
 
-        .social {
-          color: var(--neutral-100);
-          height: 18px;
-          width: 18px;
-        }
+      @media (min-width: $tablet-landscape) {
+        display: none;
+      }
+
+      .social {
+        color: var(--neutral-100);
+        height: 18px;
+        width: 18px;
       }
     }
   }

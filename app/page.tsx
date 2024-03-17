@@ -1,13 +1,13 @@
 // Components
 import GrandPrix from "./components/organisms/GrandPrix";
 import HeaderSimple from "./components/section/HeaderSimple";
+import Wrapper from "./components/helpers/Wrapper";
 
 // Types
 import { GrandPrixProps } from "@/types/organisms/GrandPrix";
 
 // Styles
 import styles from "./Schedule.module.scss";
-import { title } from "process";
 
 
 
@@ -39,11 +39,21 @@ export default async function Page() {
   return (
     <main>
       <HeaderSimple data={dataHeader} />
-      <div className={styles.scheduleGrid}>
-        {races.map((race: GrandPrixProps, index: number) => (
-          <GrandPrix {...race} key={index} />
-        ))}
+
+      <div className={styles.tabs}>
+        <div className={styles.container}>
+          <div className={`${styles.tab} ${styles.active}`}>Upcoming</div>
+          <div className={styles.tab}>Past</div>
+        </div>
       </div>
+
+      <Wrapper>
+        <div className={styles.scheduleGrid}>
+          {races.map((race: GrandPrixProps, index: number) => (
+            <GrandPrix {...race} key={index} />
+          ))}
+        </div>
+      </Wrapper>
     </main>
   );
 }
