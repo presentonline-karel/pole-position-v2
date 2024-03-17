@@ -2,6 +2,8 @@
 import GrandPrix from "./components/organisms/GrandPrix";
 import HeaderSimple from "./components/section/HeaderSimple";
 import Wrapper from "./components/helpers/Wrapper";
+import Tabs from "./components/organisms/Tabs";
+import Tab from "./components/components/Tab";
 
 // Types
 import { GrandPrixProps } from "@/types/organisms/GrandPrix";
@@ -40,12 +42,18 @@ export default async function Page() {
     <main>
       <HeaderSimple data={dataHeader} />
 
-      <div className={styles.tabs}>
+      {/* <div className={styles.tabs}>
         <div className={styles.container}>
           <div className={`${styles.tab} ${styles.active}`}>Upcoming</div>
           <div className={styles.tab}>Past</div>
         </div>
-      </div>
+      </div> */}
+
+      {/* <Tabs>
+        <Tab label="Tab 1" />
+        <Tab label="Tab 2" />
+        <Tab label="Tab 3" />
+      </Tabs> */}
 
       <Wrapper>
         <div className={styles.scheduleGrid}>
