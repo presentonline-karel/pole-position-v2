@@ -2,6 +2,7 @@
 import GrandPrix from "./components/organisms/GrandPrix";
 import HeaderSimple from "./components/section/HeaderSimple";
 import Wrapper from "./components/helpers/Wrapper";
+import Schedule from "./components/section/Schedule";
 import Tabs from "./components/organisms/Tabs";
 import Tab from "./components/components/Tab";
 
@@ -32,6 +33,8 @@ export default async function Page() {
   const schedule = await getRaceSchedule();
   const races = schedule.MRData.RaceTable.Races;
 
+  // Execute a filter function on this data to seperate upcoming & past GPs
+
   // Header data
   const dataHeader = {
     title: "F1 Schedule 2024",
@@ -54,6 +57,10 @@ export default async function Page() {
         <Tab label="Tab 2" />
         <Tab label="Tab 3" />
       </Tabs> */}
+
+      <Schedule>
+
+      </Schedule>
 
       <Wrapper>
         <div className={styles.scheduleGrid}>
