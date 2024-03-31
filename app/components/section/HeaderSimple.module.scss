@@ -7,8 +7,11 @@
   padding: 32px 0;
 
   @media (min-width: $tablet-portrait) {
-    border-bottom: 2px solid var(--neutral-300);
     padding: 48px 0;
+  }
+
+  @media (min-width: $tablet-landscape) {
+    border-bottom: 2px solid var(--neutral-300);
   }
 
   @media (min-width: $desktop-md) {
